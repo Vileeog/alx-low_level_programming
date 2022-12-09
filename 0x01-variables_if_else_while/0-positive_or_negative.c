@@ -5,7 +5,7 @@
 /**
  * main - Entry point
  *
- * Return: 0 (SucSucce
+ * Return: 0 (Success
  */
 
 int main(void)
