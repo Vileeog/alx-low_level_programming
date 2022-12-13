@@ -6,14 +6,18 @@
  * Return: 0 (Success)
  */
 
-int main(void)
+void print_alphabet(void)
 {
 char x;
-for (x = 'a'; x <= 'z'; x++)
+
+x = 'a';
+
+while (x <= 'z')
 {
 _putchar(x);
+x++;
 }
+
 _putchar('\n');
 
-return (0);
 }
