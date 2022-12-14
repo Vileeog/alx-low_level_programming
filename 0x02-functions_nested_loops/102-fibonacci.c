@@ -12,7 +12,7 @@ long int i, j, k, z;
 
 j = 1;
 
-k = 2
+k = 2;
 
 for (i = 1; i <= 50; ++i)
 {
