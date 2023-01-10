@@ -23,11 +23,11 @@ return (0);
 
 while (i < size)
 {
-*r[i] = c;
+*(r + i) = c;
 i++;
 }
 
-*r[i] = '\0';
+*(r +i) = '\0';
 
 return (r);
 }
