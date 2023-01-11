@@ -36,45 +36,44 @@ return (n);
 
 char **strtow(char *str)
 {
-char **mat, *tmp;
-int i, j, k = 0, len = 0, words, c = 0, start, end;
+char **mat;
+int i, j, k, l, words = 0, len = 0;
+
 if (str == NULL || *str == '\0')
 return (NULL);
-while (*(str + len))
-len++;
 words = count_word(str);
-if (words == 0)
+if (words == 1)
 return (NULL);
-mat = (char **) malloc(sizeof(char *) * (words + 1));
+mat = (char **)malloc(n * sizeof(char *));
 if (mat == NULL)
 return (NULL);
-for (i = 0; i <= len; i++)
+mat[words - 1] = NULL;
+i = 0;
+while (str[i])
 {
-if (str[i] == ' ' || str[i] == '\0')
+if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
 {
+for (j = 1; str[i + j] != ' ' && str[i + j]; j++)
+;
+j++;
+mat[len] = (char *)malloc(j * sizeof(char));
+j--;
+if (mat[len] == NULL)
 {
-end = i;
-tmp = (char *) malloc(sizeof(char) * (c + 1));
-while (--k >= 0)
+for (k = 0; k < len; k++)
+free(mat[k]);
+free(mat[words - 1]);
 free(mat);
 return (NULL);
 }
-for (j = 0; j < c; j++)
-tmp[j] = str[start + j];
-tmp[c] = '\0';
-mat[k] = tmp;
-k++;
-c = 0;
-}
-}
-else if (c == 0)
-{
-start = i;
-c++;
+for (l = 0; l < j; l++)
+mat[len][l] = str[i + l];
+mat[len][l] = '\0';
+len++;
+i += j;
 }
 else
-c++;
+i++;
 }
-mat[k] = NULL;
 return (mat);
 }
