@@ -27,7 +27,7 @@ while (i < size)
 i++;
 }
 
-*(r +i) = '\0';
+*(r + i) = '\0';
 
 return (r);
 }
