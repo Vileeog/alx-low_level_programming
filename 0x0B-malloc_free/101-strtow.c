@@ -44,7 +44,7 @@ return (NULL);
 words = count_word(str);
 if (words == 1)
 return (NULL);
-mat = (char **)malloc(n * sizeof(char *));
+mat = (char **)malloc(words * sizeof(char *));
 if (mat == NULL)
 return (NULL);
 mat[words - 1] = NULL;
