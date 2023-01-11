@@ -54,7 +54,7 @@ if (str[i] == ' ' || str[i] == '\0')
 {
 end = i;
 tmp = (char *) malloc(sizeof(char) * (c + 1));
-while (--k >= 0)
+while (k >= 0)
 free(mat);
 return (NULL);
 }
