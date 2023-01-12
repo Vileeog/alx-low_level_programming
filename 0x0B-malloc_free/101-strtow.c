@@ -55,7 +55,7 @@ for (j = 1; str[i + j] != ' ' && str[i + j]; j++)
 j++;
 mat[wc] = (char *)malloc(j *sizeof(char));
 j--;
-if (mar[wc] == NULL)
+if (mat[wc] == NULL)
 {
 for (k = 0; k < wc; k++)
 free(mat[k]);
