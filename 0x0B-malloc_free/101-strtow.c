@@ -34,7 +34,7 @@ return (n);
 char **strtow(char *str)
 {
 int i, j, k, l, n = 0, wc = 0;
-char **w;
+char **mat;
 
 if (str == NULL || *str == '\0')
 return (NULL);
